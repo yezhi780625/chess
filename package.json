@@ -9,7 +9,8 @@
     "react-dnd": "2.6.0",
     "react-dnd-html5-backend": "latest",
     "react-dom": "16.2.0",
-    "react-scripts": "1.1.0"
+    "react-scripts": "1.1.0",
+    "uuid": "3.2.1"
   },
   "devDependencies": {},
   "scripts": {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { DragDropContext } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
+import uuid from "uuid";
 import Square from "./Square";
 import Knight from "./Knight";
 
@@ -13,9 +14,7 @@ class Board extends Component {
 
     const [knightX, knightY] = this.props.knightPosition;
     const piece =
-      x === knightX && y === knightY ? (
-        <Knight style={{ fontSize: "12.5vh" }} />
-      ) : null;
+      x === knightX && y === knightY ? <Knight id={uuid.v4()} /> : null;
 
     return (
       <div
