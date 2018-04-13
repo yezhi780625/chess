@@ -9,6 +9,8 @@ class App extends React.Component {
     this.state = {
       knightPosition: [0, 0]
     };
+    this.canMoveKnight = this.canMoveKnight.bind(this);
+    this.moveKnight = this.moveKnight.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
   }
   canMoveKnight(toX, toY) {
@@ -34,7 +36,8 @@ class App extends React.Component {
   render() {
     return (
       <Board
-        updatePosition={this.updatePosition}
+        canMoveKnight={this.canMoveKnight}
+        moveKnight={this.moveKnight}
         knightPosition={this.state.knightPosition}
       />
     );
